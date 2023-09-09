@@ -9,7 +9,7 @@
     body: 'filter[host]={{ inventory_hostname }}'
     status_code: [200]
     timeout: '{{ new_relic_api_timeout | int }}'
-    validate_certs: '{{ ssl_skip }}'   # Add this line to skip SSL certificate validation
+    validate: '{{ validate_certs }}'   # Add this line to skip SSL certificate validation
   register: new_relic_applications
 
 - name: DEBUG - New Relic Application Id
@@ -37,4 +37,4 @@
     }
     status_code: [200, 201]
     timeout: '{{ new_relic_api_timeout | int }}'
-    validate_certs: '{{ ssl_skip }}'   # Add this line to skip SSL certificate validation
+    validate: '{{ validate_certs }}'   # Add this line to skip SSL certificate validation
