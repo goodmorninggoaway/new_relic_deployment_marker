@@ -4,3 +4,4 @@ new_relic_api_timeout: 10
 revision: ""
 changelog: ""
 description: ""
+validate_certs: "True"
